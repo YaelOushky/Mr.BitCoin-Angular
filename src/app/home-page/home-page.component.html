@@ -1,0 +1,21 @@
+<!-- <p>home-page works!</p>
+<p>Hello {{user.name}}</p>
+<p> {{user.coins}}</p>
+<p>{{bitcoin}}</p> -->
+<div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto rounded-circle mb-4" src="./assets/imgs/user.jpg" alt="" width="200" height="200">
+    <h1 class="display-5 fw-bold">{{user.name}}</h1>
+    <!-- <h1 class="display-5 fw-bold">{{contact.phone}}</h1> -->
+    <!-- <h1 class="display-5 fw-bold">{{contact.email}}</h1> -->
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">{{user.email}}</p>
+      <p class="lead mb-4">{{user.phone}}</p>
+      <p class="lead mb-4">{{user.coins}}</p>
+      <p class="lead mb-4">{{bitcoin}}</p>
+      <!-- <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> -->
+        <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Edit</button> -->
+        <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4" routerLink="/contact">Back</button> -->
+      <!-- </div> -->
+    </div>
+    <move-list *ngIf="user.moves"[moves]="user.moves"></move-list>
+  </div>

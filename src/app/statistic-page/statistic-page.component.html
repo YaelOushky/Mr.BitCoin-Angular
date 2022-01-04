@@ -1,0 +1,13 @@
+<p>statistic-page works!</p>
+<div *ngIf="!newMarketData && !marketTableTitle && !newTransactionsData && !transactionsTableTitle;else chartData"
+       class="flex loading-container">
+       <loadingscreen></loadingscreen>
+</div>
+<ng-template #chartData>
+
+       <div *ngIf="newMarketData && newTransactionsData && transactionsTableTitle" class="chart-container">
+              <chart [marketTableTitle]="marketTableTitle" [marketData]="newMarketData"
+                     [transactionsTableTitle]="transactionsTableTitle" [transactionsData]="newTransactionsData">
+              </chart>
+       </div>
+</ng-template>

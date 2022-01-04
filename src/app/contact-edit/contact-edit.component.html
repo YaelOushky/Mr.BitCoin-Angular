@@ -1,0 +1,22 @@
+<form class="px-5  my-5 " #form="ngForm" *ngIf="contact">
+    <div class="row mb-3">
+      <label for="name" class="col-form-label">Name</label>
+      <div class="">
+        <input [(ngModel)]="contact.name" type="text" class="form-control" name="name" id="name">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="phone" class="col-form-label">Phone</label>
+      <div class="">
+        <input [(ngModel)]="contact.phone" type="text" class="form-control" name="phone" id="phone">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="email"  class="col-form-label">Email</label>
+      <div class="">
+        <input [(ngModel)]="contact.email" type="email" class="form-control" name="email" id="email">
+      </div>
+    </div>
+ 
+    <button type="button" class="btn btn-primary" (click)="addContact()"  routerLink="/contact">Save</button>
+  </form>
